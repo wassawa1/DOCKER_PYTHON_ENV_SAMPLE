@@ -45,7 +45,7 @@ docker build -t my-python-app .
 - イメージの再ビルドを避けて素早く確認したい場合（開発モード）:
 
 ```bash
-docker run --rm -v "$(pwd):/app" -w /app python:3.8-slim python main.py
+docker run --rm -v "$(pwd):/app" -w /app python:3.13-slim python main.py
 ```
 
 （注意）この方法ではイメージの requirements が反映されないため、手動で `pip install -r requirements.txt` するか、開発専用のコンテナを作ると良いです。
