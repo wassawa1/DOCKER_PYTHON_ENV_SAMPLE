@@ -37,13 +37,13 @@ jobs:
           push: true
           load: true
           tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
+            ghcr.io/${{ toLower(github.repository) }}:latest
+            ghcr.io/${{ toLower(github.repository) }}:${{ github.sha }}
 
       - name: Run smoke test (execute container)
         run: |
           echo "Running container from built image..."
-          docker run --rm ghcr.io/${{ github.repository }}:${{ github.sha }} | tee output.txt
+          docker run --rm ghcr.io/${{ toLower(github.repository) }}:${{ github.sha }} | tee output.txt
           # simple check that main.py produced expected marker line
           if ! grep -q "=== Python 環境動作確認 ===" output.txt; then
             echo "Smoke test failed: marker line not found" >&2
