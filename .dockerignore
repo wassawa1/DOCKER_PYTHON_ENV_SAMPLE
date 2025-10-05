@@ -1,0 +1,36 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+.env
+
+# pip / build artifacts
+pip-wheel-metadata/
+*.egg-info/
+build/
+dist/
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Git
+.git
+
+# Jupyter
+.ipynb_checkpoints
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Type checking / test cache
+.mypy_cache/
+.pytest_cache/
+

@@ -1,0 +1,5 @@
+name: pyenv
+channels:
+  - conda-forge
+dependencies:
+  - pyinstaller
